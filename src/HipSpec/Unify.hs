@@ -8,6 +8,7 @@ import Data.Traversable (Traversable)
 
 import Control.Applicative
 
+import Control.Unification.Types
 import Control.Unification
 import Control.Unification.IntVar
 

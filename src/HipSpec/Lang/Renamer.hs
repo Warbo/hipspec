@@ -1,4 +1,5 @@
-{-# LANGUAGE ViewPatterns, FlexibleContexts #-}
+{-# LANGUAGE FlexibleContexts #-}
+{-# LANGUAGE ViewPatterns #-}
 module HipSpec.Lang.Renamer where
 
 import Control.Monad.State
