@@ -37,7 +37,7 @@ import Control.Applicative ((<$>),(<*>),Applicative)
 
 import Control.Monad (liftM)
 
-import Data.List
+import Data.List hiding (sortOn)
 import Data.Function (on)
 import Data.Ord      (comparing)
 
@@ -117,4 +117,3 @@ nubSortedOn f = map head . groupSortedOn f
 -- | Do these two lists have a non-empty intersection?
 intersects :: Eq a => [a] -> [a] -> Bool
 intersects = (not . null) .: intersect
-

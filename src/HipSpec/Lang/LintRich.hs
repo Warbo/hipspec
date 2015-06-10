@@ -6,7 +6,7 @@ import HipSpec.Lang.Type
 
 import Control.Applicative
 import Control.Monad
-import Control.Monad.Writer
+import Control.Monad.Writer hiding (Alt)
 import Control.Monad.Reader
 
 import Data.Map (Map)
@@ -193,4 +193,3 @@ lintPat t0 p = case p of
             ]
         unless (res_ty `eqType` t0) (report (msgIllTypedPattern t0 p))
     LitPat{} -> when (Integer `eqType` t0) (report (msgIllTypedPattern t0 p))
-
