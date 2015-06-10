@@ -1,4 +1,4 @@
-{-# LANGUAGE DeriveFunctor, DeriveFoldable, DeriveTraversable, RecordWildCards, ViewPatterns #-}
+{-# LANGUAGE DeriveFunctor, DeriveFoldable, DeriveTraversable, RecordWildCards, ViewPatterns, FlexibleContexts #-}
 -- | Translation from the Functional FO to PolyFOL,
 -- the only thing that needs to be done is getting rid of case,
 -- and translating some types.
@@ -263,4 +263,3 @@ trExpr' scope e =
         (runReaderT (trExpr e)
                     (makeScope (zip scope (repeat (error "ToPolyFOL.trExpr' type")))))
         (error "ToPolyFOL.trExpr' Env")
-
