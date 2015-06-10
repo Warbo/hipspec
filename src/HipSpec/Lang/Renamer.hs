@@ -1,4 +1,4 @@
-{-# LANGUAGE ViewPatterns #-}
+{-# LANGUAGE ViewPatterns, FlexibleContexts #-}
 module HipSpec.Lang.Renamer where
 
 import Control.Monad.State
@@ -68,4 +68,3 @@ renameBi2With f = runRenameM f [] . renameBi
 disambig2 :: (a -> String) -> (b -> String) -> Suggestor (Either a b) String
 disambig2 f _ (Left a)  = disambig f a
 disambig2 _ g (Right b) = disambig g b
-

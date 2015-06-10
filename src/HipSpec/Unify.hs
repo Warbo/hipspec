@@ -1,4 +1,4 @@
-{-# LANGUAGE DeriveFunctor, DeriveFoldable, DeriveTraversable, ScopedTypeVariables, ViewPatterns #-}
+{-# LANGUAGE DeriveFunctor, DeriveFoldable, DeriveTraversable, ScopedTypeVariables, ViewPatterns, FlexibleContexts #-}
 module HipSpec.Unify where
 
 import HipSpec.Lang.Simple

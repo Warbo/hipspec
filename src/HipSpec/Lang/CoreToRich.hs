@@ -1,5 +1,5 @@
 {-# OPTIONS_GHC -fno-warn-missing-signatures #-}
-{-# LANGUAGE PatternGuards, TypeSynonymInstances, FlexibleInstances, CPP #-}
+{-# LANGUAGE PatternGuards, TypeSynonymInstances, FlexibleInstances, CPP, FlexibleContexts #-}
 
 -- | Translation from GHC Core to the Rich HipSpec.Language, a subset
 module HipSpec.Lang.CoreToRich where
@@ -244,4 +244,3 @@ trType = go . expandTypeSynonyms
         | Just (tc,ts) <- splitTyConApp_maybe t0 = TyCon (idFromTyCon tc) <$> mapM go ts
         | Just tv <- getTyVar_maybe t0           = return (TyVar (idFromTyVar tv))
         | otherwise                              = throwError (msgIllegalType t0)
-
