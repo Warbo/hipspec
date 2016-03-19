@@ -1,4 +1,4 @@
-name:                hipspec
+name:                hipster
 category:            Theorem Provers
 version:             3.1
 synopsis:            HipSpec
@@ -47,9 +47,9 @@ library
     build-depends:
         base                 >= 4    && < 5,
         QuickCheck           >= 2.5,
-        quickspec            == 0.9.6
+        quickspec1           == 0.9.6
 
-executable hipspec
+executable hipster-hipspec
     hs-source-dirs: src
 
     main-is:         HipSpec/Main.hs
@@ -77,7 +77,7 @@ executable hipspec
         -- mtl-2.1 contains a severe bug
         mtl >= 2.0 && < 2.1 || >= 2.1.1 && < 2.3,
         pretty               >= 1.1,
-        geniplate            >= 0.6,
+        geniplate-mirror     >= 0.7,
         genifunctors         >= 0.3,
         bifunctors,
         void                 >= 0.5.3,
@@ -89,7 +89,7 @@ executable hipspec
         ghc-prim,
 
         -- QuickSpec
-        quickspec            == 0.9.6,
+        quickspec1           == 0.9.6,
 
         -- Printing messages
         time                 >= 1.4,
